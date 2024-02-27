@@ -11,14 +11,20 @@
     <script type="text/jsx">
       const domNode = document.getElementById("app");
 
-      function Header() {
-        return <h1>Develop, Preview and Ship</h1>
+      function Header({title}) {
+        return <h1>{title}</h1>
       }
 
       function HomePage() {
+
+        const names = ['Arnold SchwarzeNegger', 'Pamela Anderson', 'Jackie Chan'];
+
         return <div>
           {/* Nesting the header component */}
-          <Header />
+          <Header title="Develop, Preview and Ship" />
+          <ul>
+            {names.map((name) => (<li key={name}>{name}</li>))}
+          </ul>
         </div>
       }
 
