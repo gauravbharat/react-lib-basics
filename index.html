@@ -7,16 +7,30 @@
   </head>
   <body>
     <div id="app"></div>
+
+    <script type="text/jsx">
+      const domNode = document.getElementById("app");
+
+      function Header() {
+        return <h1>Develop, Preview and Ship</h1>
+      }
+
+      function HomePage() {
+        return <div>
+          {/* Nesting the header component */}
+          <Header />
+        </div>
+      }
+
+      const root = ReactDOM.createRoot(domNode);
+      root.render(<HomePage />);
+    </script>
+
     <!-- Core React library -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <!-- Provides DOM-specific methods that enable you to use React with the DOM -->
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <!-- Transform your JSX code into regular JavaScript using Babel -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/jsx">
-      const domNode = document.getElementById("app");
-      const root = ReactDOM.createRoot(domNode);
-      root.render(<h1>Develop, Preview and Ship</h1>);
-    </script>
   </body>
 </html>
