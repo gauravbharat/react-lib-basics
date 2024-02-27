@@ -7,13 +7,16 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="text/javascript">
-      const app = document.getElementById("app");
-      const h1 = document.createElement("h1");
-      const text = "Develop, Preview and Ship";
-      const textNode = document.createTextNode(text);
-      h1.appendChild(textNode);
-      app.appendChild(h1);
+    <!-- Core React library -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <!-- Provides DOM-specific methods that enable you to use React with the DOM -->
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Transform your JSX code into regular JavaScript using Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const domNode = document.getElementById("app");
+      const root = ReactDOM.createRoot(domNode);
+      root.render(<h1>Develop, Preview and Ship</h1>);
     </script>
   </body>
 </html>
