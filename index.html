@@ -18,6 +18,12 @@
       function HomePage() {
 
         const names = ['Arnold SchwarzeNegger', 'Pamela Anderson', 'Jackie Chan'];
+        const [likes, setLikes] = React.useState(0);
+
+        function handleClick(event) {
+          //console.log('button clicked', event)
+          setLikes(likes + 1);
+        }
 
         return <div>
           {/* Nesting the header component */}
@@ -25,6 +31,7 @@
           <ul>
             {names.map((name) => (<li key={name}>{name}</li>))}
           </ul>
+          <button onClick={handleClick}>Like ({likes})</button>
         </div>
       }
 
