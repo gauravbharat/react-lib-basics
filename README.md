@@ -1,3 +1,3 @@
 # react-lib-basics
 
-## incremental app from bare bones js to react, see commits for diff
+## incremental app from bare bones js to react to nextjs, see commits for diff
